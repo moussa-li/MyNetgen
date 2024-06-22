@@ -1,3 +1,4 @@
+#define OCCGEOMETRY
 #ifdef OCCGEOMETRY
 
 #include <mystdlib.h>

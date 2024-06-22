@@ -323,6 +323,8 @@ namespace netgen
       timestamp = NextTimeStamp();
     }
 
+    void RefineElement(SurfaceElementIndex eli);
+
     auto GetNSE () const { return surfelements.Size(); }
 
     // [[deprecated("Use SurfaceElement(SurfaceElementIndex) instead of int !")]]    

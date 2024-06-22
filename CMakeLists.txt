@@ -9,11 +9,11 @@ include (CMakeDependentOption)
 option( USE_NATIVE_ARCH  "build for native cpu architecture" ON)
 
 option( USE_GUI     "build with GUI" ON )
-option( USE_PYTHON  "build with python interface" ON )
+option( USE_PYTHON  "build with python interface" OFF )
 cmake_dependent_option( PREFER_SYSTEM_PYBIND11  "Use system wide PyBind11" OFF "USE_PYTHON" OFF)
 option( USE_MPI     "enable mpi parallelization" OFF )
 option( USE_MPI4PY  "enable mpi4py interface" ON )
-option( USE_OCC     "build with OpenCascade geometry kernel interface" OFF)
+option( USE_OCC     "build with OpenCascade geometry kernel interface" ON)
 option( USE_STLGEOM     "build with STL geometry support" ON)
 option( USE_CSG     "build with CSG kernel" ON)
 option( USE_INTERFACE     "build nginterface" ON)
@@ -34,7 +34,7 @@ option( CHECK_RANGE "Check array range access, automatically enabled if built in
 option( BUILD_STUB_FILES "Build stub files for better autocompletion" ON)
 option( BUILD_FOR_CONDA "Link python libraries only to executables" OFF)
 
-option( USE_SUPERBUILD       "build dependencies automatically" ON)
+option( USE_SUPERBUILD       "build dependencies automatically" OFF)
 option( TRACE_MEMORY     "Enable memory tracing" OFF)
 
 set(NG_COMPILE_FLAGS "" CACHE STRING "Additional compile flags")
@@ -77,7 +77,7 @@ if (USE_SUPERBUILD)
 
   # execute the superbuild (this script will be invoked again without the
   # USE_SUPERBUILD option this time)
-  include (cmake/SuperBuild.cmake)
+  #include (cmake/SuperBuild.cmake)
   return()                      # stop processing this file further
 else()
   project(Netgen)
@@ -122,6 +122,31 @@ include_directories ("${PROJECT_SOURCE_DIR}/include")
 include_directories ("${PROJECT_SOURCE_DIR}/libsrc")
 include_directories ("${PROJECT_SOURCE_DIR}/libsrc/include")
 include_directories ("${PROJECT_BINARY_DIR}")
+
+file(GLOB HEADER_FILES "nglib/*.h")
+foreach(HEADER ${HEADER_FILES})
+    get_filename_component(HEADER_NAME ${HEADER} NAME)
+    set(NGLIB_INCLUDE ${NGLIB_INCLUDE} nglib/${HEADER_NAME})
+endforeach()
+
+file(GLOB HEADER_FILES "libsrc/include/*.hpp")
+foreach(HEADER ${HEADER_FILES})
+    get_filename_component(HEADER_NAME ${HEADER} NAME)
+    set(NGLIB_INCLUDE ${NGLIB_INCLUDE} libsrc/include/${HEADER_NAME})
+endforeach()
+
+file(GLOB HEADER_FILES "libsrc/occ/*.hpp")
+foreach(HEADER ${HEADER_FILES})
+    get_filename_component(HEADER_NAME ${HEADER} NAME)
+    set(NGLIB_INCLUDE ${NGLIB_INCLUDE} libsrc/occ/${HEADER_NAME})
+endforeach()
+
+file(GLOB HEADER_FILES "libsrc/meshing/*.hpp")
+foreach(HEADER ${HEADER_FILES})
+    get_filename_component(HEADER_NAME ${HEADER} NAME)
+    set(NGLIB_INCLUDE ${NGLIB_INCLUDE} libsrc/meshing/${HEADER_NAME})
+endforeach()
+
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -236,7 +261,8 @@ if(APPLE)
 endif(APPLE)
 
 #######################################################################
-add_library(nglib ${NGLIB_LIBRARY_TYPE})
+add_library(nglib ${NGLIB_LIBRARY_TYPE} ${NGLIB_INCLUDE}) 
+#target_include_directories(nglib PUBLIC ${NGLIB_INCLUDE})
 if(USE_GUI)
     add_library(nggui ${NGGUI_LIBRARY_TYPE})
     if(WIN32)
@@ -352,7 +378,9 @@ install(TARGETS netgen_mpi netgen_metis ${NG_INSTALL_DIR})
 
 #######################################################################
 if (USE_OCC)
+    set(OpenCascade_dir “E:/c++ program/meshGenerate/meshGenerate/dependencies/OCCT/cmake”)
     find_package(OpenCascade NAMES OpenCASCADE opencascade REQUIRED CMAKE_FIND_ROOT_PATH_BOTH)
+	
     add_definitions(-DOCCGEOMETRY)
     set(OCC_LIBRARIES
       TKBO
@@ -387,8 +415,8 @@ if (USE_OCC)
       TKXDESTEP
       TKXSBase
       TKernel
-    )
-    include_directories(${OpenCASCADE_INCLUDE_DIR})
+    )    
+ include_directories(${OpenCASCADE_INCLUDE_DIR})
     if(NOT OpenCASCADE_BUILD_SHARED_LIBS)
       if(OpenCASCADE_WITH_FREETYPE)
         find_library( FREETYPE NAMES freetype HINTS ${OpenCASCADE_INSTALL_PREFIX}/lib)
@@ -525,6 +553,7 @@ add_subdirectory(py_tutorials)
 add_subdirectory(doc)
 add_subdirectory(nglib)
 add_subdirectory(tests)
+add_subdirectory(netgenTest)
 
 #######################################################################
 if(USE_NATIVE_ARCH)

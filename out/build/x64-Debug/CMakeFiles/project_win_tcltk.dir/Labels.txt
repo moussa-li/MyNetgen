@@ -1,0 +1,13 @@
+# Target labels
+ project_win_tcltk
+# Source files and their labels
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_tcltk
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_tcltk.rule
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_tcltk-complete.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-build.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-configure.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-download.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-install.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-mkdir.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-patch.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-update.rule

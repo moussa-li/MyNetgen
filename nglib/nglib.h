@@ -25,16 +25,17 @@
 
 // Philippose - 14.02.2009
 // Modifications for creating a DLL in Windows
-#ifdef WIN32
-   #ifdef nglib_EXPORTS
+// #ifdef WIN32 or WIN64
+//    #ifdef nglib_EXPORTS
       #define NGLIB_API   __declspec(dllexport)
-   #else
-      #define NGLIB_API   __declspec(dllimport)
-   #endif
-#else
-  #define NGLIB_API __attribute__((visibility("default")))
-#endif
+//    #else
+    //   #define NGLIB_API   __declspec(dllimport)
+//    #endif
+// #else
+//   #define NGLIB_API __attribute__((visibility("default")))
+// #endif
 
+// #define NGLIB_API   __declspec(dllimport)
 
 // ** Constants used within Netgen *********************
 /// Maximum allowed number of nodes per volume element
@@ -353,6 +354,10 @@ NGLIB_API void Ng_AddSurfaceElement (Ng_Mesh * mesh, Ng_Surface_Element_Type et,
 
 */
 NGLIB_API void Ng_AddVolumeElement (Ng_Mesh * mesh, Ng_Volume_Element_Type et, int * pi);
+
+NGLIB_API void Ng_RemoveSurfaceElement(Ng_Mesh* mesh, int Id);
+
+NGLIB_API void Ng_RefineElement(Ng_Mesh* mesh, int Id);
   
 // ------------------------------------------------------------------
 
@@ -434,6 +439,10 @@ NGLIB_API void Ng_RestrictMeshSizePoint (Ng_Mesh * mesh, double * p, double h);
     \param h    Variable of type <i>double</i>, specifying the maximum
                 allowable mesh size at that point
 */
+
+
+NGLIB_API double NG_GetH(Ng_Mesh* mesh, double* p);
+
 NGLIB_API void Ng_RestrictMeshSizeBox (Ng_Mesh * mesh, double * pmin, double * pmax, double h);
 
 // ------------------------------------------------------------------

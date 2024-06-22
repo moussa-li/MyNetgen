@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\netgen\netgenTest\main.cpp(80,42): warning C4244: “参数”: 从“double”转换到“Standard_Integer”，可能丢失数据
+    正在创建库 D:\netgen\build\x64\Debug\netgenTest.lib 和对象 D:\netgen\build\x64\Debug\netgenTest.exp
+  netgenTest.vcxproj -> D:\netgen\build\x64\Debug\netgenTest.exe

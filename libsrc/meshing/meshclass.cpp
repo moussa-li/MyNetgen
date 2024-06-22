@@ -5982,7 +5982,38 @@ namespace netgen
   }
 
 
-  void Mesh::GetIntersectingVolEls(const Point3d& p1, const Point3d& p2, 
+  void Mesh::RefineElement(SurfaceElementIndex eli)
+  {
+      auto surfelement = surfelements[eli];
+      auto np = surfelement.GetNP();
+      int pIds[6] = {0,0,0,surfelement.PNum(1),surfelement.PNum(2),surfelement.PNum(3)};
+      for (int i = 0; i < np; i++)
+      {
+         PointIndex pid1 = surfelement.PNum(i+1);
+         PointIndex pid2 = surfelement.PNum(((i+1)%3)+1);
+         MeshPoint p1 = points[pid1], p2 = points[pid2];
+         Point3d newp((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2, (p1[2] + p2[2]) / 2);
+         pIds[i] = AddPoint(newp);
+         //std::cout << "point Id : "  << pid << " xyz :" << points[pid][0] << "," << points[pid][1] << "," << points[pid][2] << std::endl;
+      }
+
+      int refineMap[4][3] = { {0,1,2},{2,3,0},{1,0,4},{5,2,1} };
+      for (int i = 0; i < 4; i++)
+      {
+          Element2d newE(pIds[refineMap[i][0]], pIds[refineMap[i][1]], pIds[refineMap[i][2]]);
+          newE.SetType(ELEMENT_TYPE::TRIG);
+                newE.SetIndex(1);
+          AddSurfaceElement(newE);
+
+      }
+      surfelements[eli].Delete();
+      Compress();
+      auto tmpSeg = segments[1];
+      std::cout << tmpSeg.surfnr1 << " " << tmpSeg.surfnr1 << std::endl;
+      //CalcSurfacesOfNode();
+  }
+
+  void Mesh::GetIntersectingVolEls(const Point3d& p1, const Point3d& p2,
                                    NgArray<int> & locels) const
   {
     elementsearchtree->GetIntersecting (p1, p2, locels);

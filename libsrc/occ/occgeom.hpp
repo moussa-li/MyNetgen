@@ -7,6 +7,7 @@
 /* Date:   26. May  03                                                     */
 /* *************************************************************************/
 
+#define OCCGEOMETRY
 #ifdef OCCGEOMETRY
 
 #include <set>

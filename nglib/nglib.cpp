@@ -230,6 +230,18 @@ namespace nglib
       m->AddVolumeElement (el);
    }
 
+    NGLIB_API void Ng_RemoveSurfaceElement(Ng_Mesh* mesh, int Id)
+    {
+        Mesh* m = (Mesh*)mesh;
+        SurfaceElementIndex id(Id);
+        m->Delete(id);
+    }
+
+    NGLIB_API void Ng_RefineElement(Ng_Mesh* mesh, int Id)
+    {
+        Mesh* m = (Mesh*)mesh;
+        m->RefineElement(id);
+    }
 
 
 
@@ -340,6 +352,12 @@ namespace nglib
    {
       ((Mesh*)mesh) -> RestrictLocalH (Point3d (p[0], p[1], p[2]), h);
    }
+
+   NGLIB_API double NG_GetH(Ng_Mesh* mesh, double* p)
+   {
+       return ((Mesh*)mesh)->GetH(p);
+   }
+
 
 
 

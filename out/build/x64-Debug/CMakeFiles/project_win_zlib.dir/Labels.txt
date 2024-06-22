@@ -1,0 +1,13 @@
+# Target labels
+ project_win_zlib
+# Source files and their labels
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib.rule
+D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib-complete.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-build.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-configure.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-download.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-install.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-mkdir.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-patch.rule
+D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-update.rule

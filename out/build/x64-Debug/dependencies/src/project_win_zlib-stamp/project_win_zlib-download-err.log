@@ -1,0 +1,30 @@
+CMake Error at project_win_zlib-stamp/download-project_win_zlib.cmake:170 (message):
+  Each download failed!
+
+    error: downloading 'https://github.com/NGSolve/ngsolve_dependencies/releases/download/v1.0.0/zlib_win64.zip' failed
+          status_code: 28
+          status_string: "Timeout was reached"
+          log:
+          --- LOG BEGIN ---
+          timeout on name lookup is not supported
+    Trying 140.82.113.4:443...
+
+  connect to 140.82.113.4 port 443 failed: Timed out
+
+  Failed to connect to github.com port 443: Timed out
+
+  Closing connection 0
+
+  
+
+          --- LOG END ---
+          
+    
+
+
+CMake Error at project_win_zlib-stamp/project_win_zlib-download-Debug-impl.cmake:9 (message):
+  Command failed (1):
+
+   'D:/vs2019/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe' '-P' 'D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/download-project_win_zlib.cmake'
+
+

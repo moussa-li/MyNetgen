@@ -8,7 +8,7 @@ typedef void * Ng_OCC_TopTools_IndexedMapOfShape;
 // **********************************************************
 // **   OpenCascade Geometry / Meshing Utilities           **
 // **********************************************************
-
+#include "nglib.h"
 // Create new OCC Geometry Object
 NGLIB_API Ng_OCC_Geometry * Ng_OCC_NewGeometry ();
 

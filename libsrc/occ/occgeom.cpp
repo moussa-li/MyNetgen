@@ -1,4 +1,4 @@
-
+#define OCCGEOMETRY
 #ifdef OCCGEOMETRY
 
 #include <cstdio>

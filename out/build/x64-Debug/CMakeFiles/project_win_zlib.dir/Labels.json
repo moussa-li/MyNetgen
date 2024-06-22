@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib-complete.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-build.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-configure.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-download.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-install.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-mkdir.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-patch.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"project_win_zlib"
+		],
+		"name" : "project_win_zlib"
+	}
+}

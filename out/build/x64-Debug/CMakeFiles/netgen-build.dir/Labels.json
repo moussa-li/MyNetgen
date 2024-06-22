@@ -1,0 +1,88 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/netgen-build"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/netgen-build.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-build.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-check_submodules1.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-configure.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-patch.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_tcltk-complete.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/CMakeFiles/project_win_zlib-complete.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-update.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-build.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-configure.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-download.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-install.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-mkdir.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-patch.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_tcltk-stamp/project_win_tcltk-update.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-build.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-configure.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-download.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-install.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-mkdir.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-patch.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/project_win_zlib-stamp/project_win_zlib-update.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-download.rule"
+		},
+		{
+			"file" : "D:/netgen/out/build/x64-Debug/dependencies/src/netgen-stamp/netgen-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"netgen"
+		],
+		"name" : "netgen-build"
+	}
+}

@@ -13,6 +13,7 @@ using namespace std;
 namespace nglib {
 #include <nglib.h>
 }
+#include "nglib_occ.h"
 
 int main (int argc, char ** argv)
 {

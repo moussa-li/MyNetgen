@@ -1,0 +1,8 @@
+-- File already exists but no hash specified (use URL_HASH):
+  file='D:/netgen/out/build/x64-Debug/dependencies/src/zlib_win64.zip'
+Old file will be removed and new file downloaded from URL.
+-- Downloading...
+   dst='D:/netgen/out/build/x64-Debug/dependencies/src/zlib_win64.zip'
+   timeout='none'
+   inactivity timeout='none'
+-- Using src='https://github.com/NGSolve/ngsolve_dependencies/releases/download/v1.0.0/zlib_win64.zip'

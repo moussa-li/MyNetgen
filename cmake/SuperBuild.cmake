@@ -60,12 +60,12 @@ if(USE_CCACHE)
 endif()
 
 #######################################################################
-set (DEPS_DOWNLOAD_URL "https://github.com/NGSolve/ngsolve_dependencies/releases/download/v1.0.0" CACHE STRING INTERNAL)
-set (OCC_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/occ75_win64.zip" CACHE STRING INTERNAL)
-set (TCLTK_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/tcltk_win64.zip" CACHE STRING INTERNAL)
-set (ZLIB_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/zlib_win64.zip" CACHE STRING INTERNAL)
-set (CGNS_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/cgns_win64.zip" CACHE STRING INTERNAL)
-set (CGNS_DOWNLOAD_URL_MAC "${DEPS_DOWNLOAD_URL}/cgns_mac.zip" CACHE STRING INTERNAL)
+#   set (DEPS_DOWNLOAD_URL "https://github.com/NGSolve/ngsolve_dependencies/releases/download/v1.0.0" CACHE STRING INTERNAL)
+#   set (OCC_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/occ75_win64.zip" CACHE STRING INTERNAL)
+#   set (TCLTK_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/tcltk_win64.zip" CACHE STRING INTERNAL)
+#   set (ZLIB_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/zlib_win64.zip" CACHE STRING INTERNAL)
+#   set (CGNS_DOWNLOAD_URL_WIN "${DEPS_DOWNLOAD_URL}/cgns_win64.zip" CACHE STRING INTERNAL)
+#   set (CGNS_DOWNLOAD_URL_MAC "${DEPS_DOWNLOAD_URL}/cgns_mac.zip" CACHE STRING INTERNAL)
 
 
 if(UNIX)

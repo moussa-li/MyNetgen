@@ -57,8 +57,8 @@ namespace netgen
 
   void Ng_PrintDest(const char * s)
   {
-    if (id == 0)
-      (*mycout) << s << flush;
+    /* if (id == 0)
+      (*mycout) << s << flush; */
   }
 
   DLL_HEADER void MyError(const char * ch)

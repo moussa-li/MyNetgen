@@ -957,7 +957,7 @@ protected:
 
 
 template <class T>
-class INDEX_3_CLOSED_HASHTABLE : public BASE_INDEX_3_CLOSED_HASHTABLE
+class  INDEX_3_CLOSED_HASHTABLE: public BASE_INDEX_3_CLOSED_HASHTABLE
 {
   // MoveableArray<T,0> cont;
   NgArray<T,0> cont;

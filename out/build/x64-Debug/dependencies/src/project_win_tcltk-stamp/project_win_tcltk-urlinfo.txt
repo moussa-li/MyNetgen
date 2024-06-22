@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://github.com/NGSolve/ngsolve_dependencies/releases/download/v1.0.0/tcltk_win64.zip'
+tag=''

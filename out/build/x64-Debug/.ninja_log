@@ -1,0 +1,4 @@
+# ninja log v5
+8	247	7164458518990282	dependencies/src/project_win_tcltk-stamp/project_win_tcltk-mkdir	f86f0a52e0933f7b
+1	239	7164458518920187	dependencies/src/project_win_zlib-stamp/project_win_zlib-mkdir	86dae24528a4e809
+0	13	0	clean	d589eb1942897cb4

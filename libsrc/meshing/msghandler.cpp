@@ -3,7 +3,7 @@
 
 namespace netgen
 {
-  // int printmessage_importance = 3;
+  int printmessage_importance = 1;
 int printwarnings = 1;
 int printerrors = 1;
 int printdots = 1;
@@ -30,6 +30,7 @@ void PrintMessage(int importance,
 {
   if (importance <= printmessage_importance)
     {
+
       Ng_PrintDest(MyStr(" ")+s1+s2+MyStr("\n"));
     }
 }
